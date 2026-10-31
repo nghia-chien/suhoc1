@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Toàn trang chỉ dùng 2 font: Playfair Display (tiêu đề) và Be Vietnam Pro (nội dung). */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/PlayfairDisplay.ttf") format("truetype");
+  font-weight: 400 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  src: url("/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  src: url("/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-serif: var(--font-display);
+  --font-mono: var(--font-sans);
+
+  --color-paper: #f3efe6;
+  --color-paper-deep: #e8e1d3;
+  --color-ink: #1d1b18;
+  --color-ink-soft: #48433c;
+  --color-mute: #786f63;
+  --color-line: #d3cabb;
+  --color-seal: #9e2a20;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  /* Không dùng chữ nghiêng giả lập. */
+  em,
+  i,
+  cite {
+    font-style: normal;
+  }
+  a {
+    text-underline-offset: 3px;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-seal);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      padding-inline: 2rem;
+    }
+  }
+}
