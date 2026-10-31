@@ -4,6 +4,9 @@ export const project = {
   intro:
     "Trang này giới thiệu sáu nhân vật gắn với phong trào yêu nước và cách mạng ở Sài Gòn – Gia Định – Chợ Lớn, từ cuối thế kỷ XIX đến giữa thế kỷ XX. Mỗi người có một phòng riêng: tiểu sử, hoạt động tại Sài Gòn, hình ảnh tư liệu, cách thành phố ghi nhớ họ và nguồn tham khảo.",
   info: "Dự án Lịch sử Khối 11 “Khát vọng độc lập cho thành phố” · 50:01 – Khắc dấu rạng đông",
+  audio: "/audio/gioi-thieu.mp3",
+  narration:
+    "Chào mừng bạn đến với bảo tàng số “Những người sống vì Sài Gòn”. Nơi đây là sáu căn phòng dành cho sáu danh nhân: Trần Chánh Chiếu, Nguyễn An Ninh, Tôn Đức Thắng, Lý Tự Trọng, Võ Văn Tần và Nguyễn Thị Minh Khai. Mỗi người một hoàn cảnh, một con đường, nhưng đều chung một khát vọng: thấy thành phố và đất nước được độc lập. Bạn có thể đi theo dòng thời gian, ghé từng phòng trưng bày, nghe thuyết minh, xem ảnh tư liệu, rồi tìm lại tên họ trên những con đường của Thành phố Hồ Chí Minh hôm nay. Mời bạn bắt đầu hành trình.",
 };
 
 export const nav = [

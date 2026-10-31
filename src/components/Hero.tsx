@@ -1,5 +1,6 @@
 import { heroes } from "../data/heroes";
 import { method, project } from "../data/site";
+import { AudioGuide } from "./ui/AudioGuide";
 
 export function Hero() {
   return (
@@ -9,7 +10,12 @@ export function Hero() {
       <p className="mt-3 text-xl text-ink-soft md:text-2xl">{project.subtitle}</p>
 
       <div className="mt-10 grid gap-10 md:grid-cols-12">
-        <p className="text-lg md:col-span-7">{project.intro}</p>
+        <div className="md:col-span-7">
+          <p className="text-lg">{project.intro}</p>
+          <div className="mt-6 max-w-xl">
+            <AudioGuide src={project.audio} label="bảo tàng" text={project.narration} />
+          </div>
+        </div>
         <div className="md:col-span-5">
           <h2 className="text-xl">Cách chúng em chọn tư liệu</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-[0.95rem] text-ink-soft">
